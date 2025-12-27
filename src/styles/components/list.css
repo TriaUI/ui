@@ -1,0 +1,26 @@
+.ui-list{
+  background: var(--ui-panel);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  overflow: hidden;
+}
+
+/* Flat list variant (no shadow/background) */
+.ui-list[data-variant="plain"]{
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.ui-list__divider{
+  height: 1px;
+  background: var(--ui-border);
+  width: 100%;
+}
+
+.ui-list__divider[data-inset="true"]{
+  width: auto;
+  margin-left: 52px; /* aligns with typical 'before' icon/avatar */
+}

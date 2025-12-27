@@ -1,0 +1,19 @@
+.ui-hcell{
+  width: var(--ui-hcell-w, 160px);
+  border-radius: var(--ui-radius);
+  border: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+  box-shadow: var(--ui-shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+}
+
+.ui-hcell__media{ width: 100%; }
+.ui-hcell__body{ padding: 10px 10px 12px 10px; display: grid; gap: 4px; }
+.ui-hcell__title{ font-weight: 800; font-size: 13px; }
+.ui-hcell__subtitle{ font-size: 12px; color: var(--ui-muted); }
+
+.ui-hcell[data-clickable="true"]{ cursor: pointer; }
+.ui-hcell[data-clickable="true"]:active{ transform: translateY(1px); }

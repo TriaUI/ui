@@ -1,0 +1,16 @@
+.ui-hscroll{
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.ui-hscroll__inner{
+  display: flex;
+  gap: var(--ui-hscroll-gap, 12px);
+  width: max-content;
+}
+
+.ui-hscroll::-webkit-scrollbar{ height: 8px; }
+.ui-hscroll::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.12); border-radius: 999px; }
+:root[data-theme="light"] .ui-hscroll::-webkit-scrollbar-thumb{ background: rgba(17,19,24,0.12); }

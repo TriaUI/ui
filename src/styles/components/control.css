@@ -1,0 +1,38 @@
+.ui-control{
+    height: var(--input-h-md, 40px);
+    padding: 0 var(--input-px, 12px);
+    border-radius: var(--input-radius, var(--ui-radius));
+    border: 1px solid var(--ui-border);
+    background: var(--ui-panel);
+    color: var(--ui-fg);
+    font: inherit;
+    outline: none;
+    width: 100%;
+    transition: box-shadow var(--ui-duration, 180ms) var(--ui-ease, ease), border-color var(--ui-duration, 180ms) var(--ui-ease, ease), background var(--ui-duration, 180ms) var(--ui-ease, ease);
+}
+.ui-control:focus-visible{
+    box-shadow: var(--ui-focus);
+    border-color: color-mix(in oklab, var(--ui-primary) 55%, var(--ui-border));
+}
+.ui-control[disabled]{
+    opacity: .6;
+    cursor: not-allowed;
+}
+.ui-control--sm{ height: 34px; }
+.ui-control--lg{ height: 46px; }
+
+.ui-control__row{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.ui-control__hint{
+    color: var(--ui-muted);
+    font-size: 12px;
+    line-height: 1.2;
+}
+.ui-control__error{
+    color: color-mix(in oklab, var(--ui-danger) 85%, white);
+    font-size: 12px;
+    line-height: 1.2;
+}

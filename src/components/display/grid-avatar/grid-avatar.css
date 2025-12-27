@@ -1,0 +1,12 @@
+.ui-gridavatar{
+  display: grid;
+  gap: 10px;
+}
+.ui-gridavatar[data-cols="2"]{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+.ui-gridavatar[data-cols="3"]{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+.ui-gridavatar[data-cols="4"]{ grid-template-columns: repeat(4, minmax(0,1fr)); }
+
+.ui-gridavatar__cell{ display: flex; align-items: center; gap: 10px; }
+.ui-gridavatar__label{ display: grid; gap: 2px; }
+.ui-gridavatar__title{ font-weight: 700; }
+.ui-gridavatar__subtitle{ font-size: 12px; color: var(--ui-muted); }

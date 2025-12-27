@@ -1,0 +1,23 @@
+:root[data-theme="light"]{
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --text: #121826;
+    --muted: #5b6477;
+    --border: rgba(18, 24, 38, 0.12);
+    --accent: #5b5cf6;
+}
+
+:root[data-theme="dark"]{
+    --bg: #0b0d12;
+    --surface: #111522;
+    --text: #e8edf7;
+    --muted: #a6b0c3;
+    --border: rgba(255, 255, 255, 0.12);
+    --accent: #6d5efc;
+}
+
+/* Бренды (пример) */
+:root[data-brand="default"]{ }
+:root[data-brand="neon"]{
+    --accent: #00f5d4;
+}

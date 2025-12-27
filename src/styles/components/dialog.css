@@ -1,0 +1,32 @@
+.ui-dialog__overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--modal-overlay, var(--ui-overlay));
+    backdrop-filter: blur(var(--modal-blur, 6px));
+}
+
+.ui-dialog__content {
+    width: min(var(--modal-w, 520px), calc(100vw - 24px));
+    border-radius: var(--modal-radius, var(--ui-radius));
+    padding: var(--modal-p, 16px);
+    font-family: var(--ui-font);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--ui-panel);
+    color: var(--ui-fg);
+    border: 1px solid var(--ui-border);
+    box-shadow: var(--ui-shadow);
+}
+
+.ui-dialog__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ui-dialog__desc {
+    margin: 8px 0 0 0;
+    color: var(--ui-muted);
+}

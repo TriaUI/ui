@@ -1,0 +1,186 @@
+/* presets.css — platform × skin × theme presets for Tria UI
+   Attach presets by setting data-platform, data-skin, data-theme on :root (or a container).
+*/
+
+:root{
+  /* Component tokens — Button */
+  --btn-radius: var(--ui-radius);
+  --btn-gap: 10px;
+  --btn-h-sm: 32px;
+  --btn-h-md: 40px;
+  --btn-h-lg: 48px;
+  --btn-px-sm: 12px;
+  --btn-px-md: 14px;
+  --btn-px-lg: 16px;
+
+  /* Component tokens — Input/Control */
+  --input-radius: var(--ui-radius);
+  --input-h-sm: 34px;
+  --input-h-md: 40px;
+  --input-h-lg: 46px;
+  --input-px: 12px;
+
+  /* Component tokens — Cell */
+  --cell-h: 52px;
+  --cell-px: 12px;
+  --cell-gap: 12px;
+  --cell-before: 28px;
+  --cell-chev: 18px;
+  --cell-badge-h: 18px;
+  --cell-badge-minw: 18px;
+  --cell-badge-px: 6px;
+  --cell-badge-fs: 11px;
+
+  /* Component tokens — Cards & grids */
+  --card-p: 12px;
+  --card-header-py: 12px;
+  --card-header-pb: 10px;
+  --card-footer-pt: 10px;
+  --card-footer-pb: 12px;
+  --cardgrid-gap: 12px;
+
+  /* Component tokens — Modal / Dialog / Sheets */
+  --modal-radius: var(--ui-radius);
+  --modal-w: 520px;
+  --modal-p: 16px;
+  --modal-overlay: var(--ui-overlay, rgba(0,0,0,.55));
+  --modal-blur: 6px;
+
+  /* Component tokens — TabBar */
+  --tabbar-h: 64px;
+  --tabbar-w: 88px;
+  --tabbar-gap: 12px;
+  --tabbar-radius: calc(var(--ui-radius) + 6px);
+  --tabbar-blur: 10px;
+  --tabbar-shadow: 0 10px 30px rgba(0,0,0,.20);
+  --tabbar-item-h: 56px;
+  --tabbar-item-radius: var(--ui-radius);
+
+  /* Component tokens — Calendar */
+  --cal-p: 12px;
+  --cal-gap: 6px;
+  --cal-day: 36px;
+  --cal-day-radius: 10px;
+
+  /* Component tokens — Chips */
+  --chip-gap: 8px;
+  --chip-py: 7px;
+  --chip-px: 10px;
+  --chipsbox-p: 10px;
+}
+
+/* =========================
+   Skin: iOS (Cupertino-ish)
+========================= */
+:root[data-skin="ios"]{
+  --ui-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, "Apple Color Emoji", "Segoe UI Emoji";
+  --ui-radius: 16px;
+  --ui-shadow: 0 18px 55px rgba(0,0,0,.28);
+
+  /* Controls sizing */
+  --btn-radius: 16px;
+  --btn-h-sm: 34px;
+  --btn-h-md: 44px;
+  --btn-h-lg: 52px;
+  --btn-px-md: 16px;
+
+  --input-radius: 16px;
+  --input-h-sm: 36px;
+  --input-h-md: 44px;
+  --input-h-lg: 52px;
+  --input-px: 14px;
+
+  --cell-h: 56px;
+
+  --modal-radius: 18px;
+  --modal-p: 18px;
+  --modal-blur: 10px;
+
+  --tabbar-h: 70px;
+  --tabbar-radius: 18px;
+  --tabbar-blur: 18px;
+  --tabbar-shadow: 0 12px 34px rgba(0,0,0,.24);
+
+  --cal-day: 40px;
+  --cal-day-radius: 12px;
+
+  --chip-py: 8px;
+  --chip-px: 12px;
+  --chipsbox-p: 12px;
+}
+
+/* Cupertino surface palette */
+:root[data-skin="ios"][data-theme="light"]{
+  --ui-bg: #f2f2f7;
+  --ui-panel: #ffffff;
+  --ui-fg: #111111;
+  --ui-muted: rgba(60,60,67,0.72);
+  --ui-border: rgba(60,60,67,0.18);
+  --ui-shadow: 0 12px 28px rgba(0,0,0,.12);
+  --ui-overlay: rgba(0,0,0,.25);
+}
+
+:root[data-skin="ios"][data-theme="dark"]{
+  --ui-bg: #000000;
+  --ui-panel: #1c1c1e;
+  --ui-fg: #ffffff;
+  --ui-muted: rgba(235,235,245,0.60);
+  --ui-border: rgba(235,235,245,0.16);
+  --ui-shadow: 0 18px 55px rgba(0,0,0,.34);
+  --ui-overlay: rgba(0,0,0,.55);
+}
+
+/* =========================
+   Skin: Android (Material-ish)
+========================= */
+:root[data-skin="android"]{
+  --ui-font: ui-sans-serif, Roboto, system-ui, "Segoe UI", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --ui-radius: 12px;
+  --ui-shadow: 0 12px 34px rgba(0,0,0,.22);
+
+  --btn-radius: 12px;
+  --btn-h-sm: 32px;
+  --btn-h-md: 40px;
+  --btn-h-lg: 48px;
+
+  --input-radius: 12px;
+
+  --cell-h: 52px;
+
+  --modal-radius: 14px;
+  --modal-p: 16px;
+
+  --tabbar-h: 64px;
+  --tabbar-radius: 14px;
+  --tabbar-blur: 10px;
+  --tabbar-shadow: 0 10px 28px rgba(0,0,0,.22);
+
+  --cal-day: 36px;
+  --cal-day-radius: 10px;
+}
+
+:root[data-skin="android"][data-theme="light"]{
+  --ui-bg: #fafafa;
+  --ui-panel: #ffffff;
+  --ui-fg: #111318;
+  --ui-muted: rgba(17,19,24,0.62);
+  --ui-border: rgba(17,19,24,0.12);
+  --ui-shadow: 0 10px 26px rgba(17,19,24,0.12);
+  --ui-overlay: rgba(0,0,0,.25);
+}
+
+:root[data-skin="android"][data-theme="dark"]{
+  --ui-bg: #121212;
+  --ui-panel: #1e1e1e;
+  --ui-fg: #f4f6fb;
+  --ui-muted: rgba(244,246,251,0.65);
+  --ui-border: rgba(255,255,255,0.12);
+  --ui-shadow: 0 12px 34px rgba(0,0,0,.28);
+  --ui-overlay: rgba(0,0,0,.55);
+}
+
+/* =========================
+   Platform accents
+========================= */
+:root[data-platform="vk"]{ --ui-primary: #2d81e0; --ui-primary-fg: #ffffff; }
+:root[data-platform="tg"]{ --ui-primary: #3390ec; --ui-primary-fg: #ffffff; }

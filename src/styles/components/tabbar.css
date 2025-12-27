@@ -1,0 +1,138 @@
+/* Всегда поверх, всегда привязан к viewport */
+.ui-tabbar{
+    position: fixed;
+    z-index: 60;
+    border: 1px solid var(--ui-border);
+    background: color-mix(in oklab, var(--ui-bg) 88%, transparent);
+    backdrop-filter: blur(var(--tabbar-blur, 10px));
+    box-shadow: var(--tabbar-shadow, 0 10px 30px rgba(0,0,0,.20));
+}
+
+/* ===== Bottom (mobile default) ===== */
+.ui-tabbar[data-placement="bottom"]{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    padding-bottom: var(--safe-bottom);
+}
+
+.ui-tabbar[data-placement="bottom"] .ui-tabbar__inner{
+    height: var(--tabbar-h);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+}
+
+/* ===== Right placements (desktop/tablet) ===== */
+.ui-tabbar[data-placement^="right-"]{
+    right: calc(var(--safe-right) + var(--tabbar-gap));
+    width: var(--tabbar-w);
+    border-radius: var(--tabbar-radius, calc(var(--ui-radius) + 6px));
+    padding: 10px 8px;
+}
+
+.ui-tabbar[data-placement="right-top"]{
+    top: calc(var(--safe-top) + var(--tabbar-gap));
+}
+
+.ui-tabbar[data-placement="right-center"]{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ui-tabbar[data-placement="right-bottom"]{
+    bottom: calc(var(--safe-bottom) + var(--tabbar-gap));
+}
+
+.ui-tabbar[data-placement^="right-"] .ui-tabbar__inner{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ===== Items ===== */
+.ui-tabbar__item{
+    height: var(--tabbar-item-h, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--tabbar-item-p, 6px);
+    cursor: pointer;
+    user-select: none;
+    color: var(--ui-muted);
+    position: relative;
+    border: 0;
+    background: transparent;
+    border-radius: var(--tabbar-item-radius, var(--ui-radius));
+}
+
+.ui-tabbar__item[data-active="true"]{
+    color: var(--ui-fg);
+    background: rgba(255,255,255,0.06);
+}
+:root[data-theme="light"] .ui-tabbar__item[data-active="true"]{
+    background: rgba(17,19,24,0.06);
+}
+
+.ui-tabbar__item:focus-visible{
+    outline: none;
+    box-shadow: var(--ui-focus);
+}
+
+.ui-tabbar__iconWrap{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+}
+
+.ui-tabbar__label{
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.ui-tabbar__stack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-tabbar__badgeDot,
+.ui-tabbar__badge{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-radius: 999px;
+    border: 2px solid var(--ui-bg);
+    background: var(--ui-danger);
+    color: var(--ui-danger-fg);
+    font-size: 11px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+}
+
+.ui-tabbar__badgeDot{
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    padding: 0;
+}
+
+.ui-tabbar__item[disabled]{
+    opacity: .45;
+    cursor: not-allowed;
+}

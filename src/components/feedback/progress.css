@@ -1,0 +1,15 @@
+.ui-progress{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+}
+:root[data-theme="light"] .ui-progress{ background: rgba(17,19,24,0.08); }
+
+.ui-progress__bar{
+  height: 100%;
+  width: 0%;
+  background: var(--ui-primary);
+  transition: width .16s ease;
+}

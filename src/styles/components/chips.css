@@ -1,0 +1,49 @@
+.ui-chiprow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--chip-gap, 8px);
+  align-items: center;
+}
+
+.ui-chip{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--chip-gap, 8px);
+  padding: var(--chip-py, 7px) var(--chip-px, 10px);
+  border-radius: 999px;
+  border: 1px solid var(--ui-border);
+  background: rgba(255,255,255,0.04);
+  color: var(--ui-fg);
+  font-size: 13px;
+}
+:root[data-theme="light"] .ui-chip{
+  background: rgba(17,19,24,0.04);
+}
+
+.ui-chip__x{
+  border: 0;
+  background: transparent;
+  color: var(--ui-muted);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.ui-chipsinput__input{
+  height: 32px;
+  min-width: 120px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ui-fg);
+  font: inherit;
+}
+
+.ui-chipsbox{
+  border: 1px solid var(--ui-border);
+  border-radius: var(--input-radius, var(--ui-radius));
+  background: var(--ui-panel);
+  padding: var(--chipsbox-p, 10px);
+  display: grid;
+  gap: var(--chip-gap, 8px);
+}

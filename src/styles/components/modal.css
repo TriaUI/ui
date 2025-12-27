@@ -1,0 +1,82 @@
+.ui-sheet__overlay{
+  position: fixed;
+  inset: 0;
+  background: var(--modal-overlay, var(--ui-overlay, rgba(0,0,0,0.55)));
+  backdrop-filter: blur(var(--modal-blur, 6px));
+  z-index: 200;
+}
+
+.ui-sheet__content{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: var(--safe-bottom);
+  background: var(--ui-panel);
+  border-top: 1px solid var(--ui-border);
+  border-radius: var(--modal-radius, 18px) var(--modal-radius, 18px) 0 0;
+  box-shadow: var(--ui-shadow);
+  z-index: 210;
+}
+
+.ui-sheet__handle{
+  width: 44px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  margin: 10px auto 6px auto;
+}
+:root[data-theme="light"] .ui-sheet__handle{
+  background: rgba(17,19,24,0.18);
+}
+
+.ui-sheet__body{
+  padding: 10px 12px 12px 12px;
+}
+
+.ui-actions__btn{
+  width: 100%;
+  border: 1px solid var(--ui-border);
+  background: transparent;
+  color: var(--ui-fg);
+  padding: var(--ui-space-2, 10px) var(--cell-px, 12px);
+  border-radius: var(--ui-radius);
+  text-align: left;
+  cursor: pointer;
+}
+.ui-actions__btn:hover{ background: rgba(255,255,255,0.06); }
+:root[data-theme="light"] .ui-actions__btn:hover{ background: rgba(17,19,24,0.06); }
+.ui-actions__btn[data-tone="danger"]{ color: color-mix(in oklab, var(--ui-danger) 90%, white); }
+
+.ui-modalpage__content{
+  position: fixed;
+  inset: 0;
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+  background: var(--ui-bg);
+  z-index: 210;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-modalpage__header{
+  height: var(--cell-h, 56px);
+  display: flex;
+  align-items: center;
+  gap: var(--cell-gap, 12px);
+  padding: 0 var(--cell-px, 12px);
+  border-bottom: 1px solid var(--ui-border);
+  background: color-mix(in oklab, var(--ui-bg) 90%, transparent);
+  backdrop-filter: blur(var(--modal-blur, 6px));
+}
+
+.ui-modalpage__title{
+  font-weight: 800;
+  flex: 1;
+}
+
+.ui-modalpage__body{
+  flex: 1;
+  overflow: auto;
+  padding: var(--ui-space-3, 14px);
+}

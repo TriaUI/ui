@@ -1,0 +1,22 @@
+.ui-slider{
+  display: grid;
+  gap: 8px;
+}
+.ui-slider__row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ui-slider__label{
+  font-weight: 700;
+  font-size: 13px;
+}
+.ui-slider__value{
+  color: var(--ui-muted);
+  font-size: 12px;
+}
+.ui-slider input[type="range"]{
+  width: 100%;
+  accent-color: var(--ui-primary);
+}

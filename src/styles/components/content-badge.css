@@ -1,0 +1,9 @@
+.ui-contentbadge{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.ui-contentbadge[data-pos="tr"]{ left: auto; right: 10px; }
+.ui-contentbadge[data-pos="bl"]{ top: auto; bottom: 10px; }
+.ui-contentbadge[data-pos="br"]{ top: auto; bottom: 10px; left: auto; right: 10px; }

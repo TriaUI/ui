@@ -1,0 +1,8 @@
+.ui-inforow{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ui-inforow__label{ color: var(--ui-muted); font-size: 13px; }
+.ui-inforow__value{ font-weight: 700; }

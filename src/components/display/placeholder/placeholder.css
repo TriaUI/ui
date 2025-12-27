@@ -1,0 +1,25 @@
+.ui-placeholder{
+  background: var(--ui-panel);
+  border: 1px dashed color-mix(in oklab, var(--ui-border) 70%, transparent);
+  border-radius: var(--ui-radius);
+  padding: 18px;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.ui-placeholder__icon{
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+}
+:root[data-theme="light"] .ui-placeholder__icon{ background: rgba(17,19,24,0.06); }
+
+.ui-placeholder__title{ margin: 0; font-weight: 900; }
+.ui-placeholder__desc{ margin: 0; color: var(--ui-muted); }
+.ui-placeholder__actions{ display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }

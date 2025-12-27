@@ -1,0 +1,18 @@
+.ui-richcell{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.ui-richcell[data-clickable="true"]{ cursor: pointer; }
+.ui-richcell[data-clickable="true"]:hover{ background: rgba(255,255,255,0.04); }
+:root[data-theme="light"] .ui-richcell[data-clickable="true"]:hover{ background: rgba(17,19,24,0.04); }
+
+.ui-richcell__before{ display: inline-flex; }
+.ui-richcell__body{ flex: 1; display: grid; gap: 6px; min-width: 0; }
+.ui-richcell__title{ font-weight: 800; }
+.ui-richcell__subtitle{ color: var(--ui-muted); font-size: 13px; }
+.ui-richcell__bottom{ display: flex; gap: 8px; flex-wrap: wrap; }
+.ui-richcell__after{ display: inline-flex; align-items: center; justify-content: center; color: var(--ui-muted); }

@@ -1,0 +1,24 @@
+.ui-segmented{
+  display: inline-flex;
+  border: 1px solid var(--ui-border);
+  border-radius: calc(var(--ui-radius) + 6px);
+  background: var(--ui-panel);
+  padding: 4px;
+  gap: 4px;
+}
+.ui-segmented__btn{
+  height: 34px;
+  padding: 0 12px;
+  border-radius: var(--ui-radius);
+  border: 0;
+  background: transparent;
+  color: var(--ui-muted);
+  cursor: pointer;
+}
+.ui-segmented__btn[data-active="true"]{
+  background: rgba(255,255,255,0.08);
+  color: var(--ui-fg);
+}
+:root[data-theme="light"] .ui-segmented__btn[data-active="true"]{
+  background: rgba(17,19,24,0.08);
+}

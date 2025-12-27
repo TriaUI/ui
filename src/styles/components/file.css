@@ -1,0 +1,24 @@
+.ui-file{
+  display: grid;
+  gap: 8px;
+}
+.ui-file__label{
+  font-weight: 700;
+  font-size: 13px;
+}
+.ui-file__button{
+  height: var(--input-h-md, 40px);
+  padding: 0 var(--input-px, 12px);
+  border-radius: var(--input-radius, var(--ui-radius));
+  border: 1px dashed var(--ui-border);
+  background: transparent;
+  color: var(--ui-fg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ui-file__name{
+  color: var(--ui-muted);
+  font-size: 12px;
+}

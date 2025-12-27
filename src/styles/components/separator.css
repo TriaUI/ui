@@ -1,0 +1,5 @@
+.ui-separator{
+    height: 1px;
+    background: var(--ui-border);
+    width: 100%;
+}

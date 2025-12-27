@@ -1,0 +1,23 @@
+.ui-drop{
+  border: 1px dashed var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: rgba(255,255,255,0.02);
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}
+:root[data-theme="light"] .ui-drop{
+  background: rgba(17,19,24,0.02);
+}
+.ui-drop[data-over="true"]{
+  border-color: color-mix(in oklab, var(--ui-primary) 55%, var(--ui-border));
+  box-shadow: var(--ui-focus);
+}
+.ui-drop__title{
+  font-weight: 800;
+}
+.ui-drop__hint{
+  color: var(--ui-muted);
+  font-size: 12px;
+}

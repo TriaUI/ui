@@ -1,0 +1,63 @@
+.ui-cal{
+  border: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+  width: 100%;
+  padding: var(--cal-p, 12px);
+  border-radius: var(--ui-radius);
+  font-family: var(--ui-font);
+}
+
+.ui-cal__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ui-cal__title{
+  font-weight: 800;
+}
+
+.ui-cal__grid{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--cal-gap, 6px);
+}
+
+.ui-cal__dow{
+  text-align: center;
+  color: var(--ui-muted);
+  font-size: 11px;
+  padding: 6px 0;
+}
+
+.ui-cal__day{
+  height: var(--cal-day, 36px);
+  border-radius: var(--cal-day-radius, 10px);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ui-fg);
+  cursor: pointer;
+}
+
+.ui-cal__day:hover{
+  background: rgba(255,255,255,0.06);
+}
+:root[data-theme="light"] .ui-cal__day:hover{
+  background: rgba(17,19,24,0.06);
+}
+
+.ui-cal__day[data-muted="true"]{
+  color: color-mix(in oklab, var(--ui-muted) 85%, transparent);
+}
+
+.ui-cal__day[data-selected="true"]{
+  background: var(--ui-primary);
+  color: var(--ui-primary-fg);
+}
+
+.ui-cal__day[data-range="true"]{
+  background: color-mix(in oklab, var(--ui-primary) 25%, transparent);
+  border-color: color-mix(in oklab, var(--ui-primary) 40%, transparent);
+}

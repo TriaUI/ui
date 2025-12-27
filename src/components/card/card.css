@@ -1,0 +1,61 @@
+.ui-card{
+    background: var(--ui-panel);
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    box-shadow: var(--ui-shadow);
+    overflow: hidden;
+}
+
+/* варианты */
+.ui-card[data-variant="flat"]{
+    box-shadow: none;
+}
+.ui-card[data-variant="outline"]{
+    box-shadow: none;
+    background: transparent;
+}
+
+/* кликабельная карточка */
+.ui-card[data-clickable="true"]{
+    cursor: pointer;
+    transition: transform .08s ease, background .12s ease, border-color .12s ease;
+}
+.ui-card[data-clickable="true"]:hover{
+    background: color-mix(in oklab, var(--ui-panel) 92%, white);
+}
+:root[data-theme="light"] .ui-card[data-clickable="true"]:hover{
+    background: color-mix(in oklab, var(--ui-panel) 92%, black);
+}
+.ui-card[data-clickable="true"]:active{
+    transform: translateY(1px);
+}
+
+/* части карточки */
+.ui-card__header{
+    padding: var(--card-header-py, 12px) var(--card-p, 12px) var(--card-header-pb, 10px) var(--card-p, 12px);
+    display: grid;
+    gap: 4px;
+}
+.ui-card__title{
+    margin: 0;
+    font-weight: 800;
+    font-size: 14px;
+}
+.ui-card__subtitle{
+    margin: 0;
+    color: var(--ui-muted);
+    font-size: 13px;
+}
+
+.ui-card__content{
+    padding: var(--card-p, 12px);
+}
+
+.ui-card__footer{
+    padding: var(--card-footer-pt, 10px) var(--card-p, 12px) var(--card-footer-pb, 12px) var(--card-p, 12px);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--ui-border);
+}

@@ -1,0 +1,28 @@
+.ui-pull{
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+.ui-pull__indicator{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  transition: height .12s ease;
+}
+.ui-pull__pill{
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+  color: var(--ui-muted);
+  font-size: 12px;
+  box-shadow: var(--ui-shadow);
+}

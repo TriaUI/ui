@@ -1,0 +1,127 @@
+.ui-cell{
+  width: 100%;
+  display: flex;
+  gap: var(--cell-gap, 12px);
+  align-items: center;
+  padding: var(--cell-px, 12px);
+  min-height: var(--cell-h, 52px);
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  cursor: default;
+  font-family: var(--ui-font);
+}
+
+.ui-cell[data-clickable="true"]{
+  cursor: pointer;
+  transition: background .12s ease, transform .06s ease;
+}
+
+.ui-cell[data-clickable="true"]:hover{
+  background: rgba(255,255,255,0.04);
+}
+:root[data-theme="light"] .ui-cell[data-clickable="true"]:hover{
+  background: rgba(17,19,24,0.04);
+}
+
+.ui-cell[data-clickable="true"]:active{
+  transform: translateY(1px);
+}
+
+.ui-cell:focus-visible{
+  outline: none;
+  box-shadow: var(--ui-focus);
+}
+
+.ui-cell[disabled]{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.ui-cell__before{
+  width: var(--cell-before, 28px);
+  height: var(--cell-before, 28px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.ui-cell__main{
+  min-width: 0;
+  flex: 1 1 auto;
+  display: grid;
+  gap: 4px;
+}
+
+.ui-cell__titleRow{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ui-cell__title{
+  font-weight: 650;
+  font-size: 14px;
+  line-height: 1.15;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-cell[data-multiline="true"] .ui-cell__title{
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.ui-cell__subtitle{
+  font-size: 13px;
+  color: var(--ui-muted);
+  line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ui-cell[data-multiline="true"] .ui-cell__subtitle{
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.ui-cell__after{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ui-muted);
+}
+
+.ui-cell__chevron{
+  width: var(--cell-chev, 18px);
+  height: var(--cell-chev, 18px);
+  opacity: .8;
+}
+
+.ui-cell__badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--cell-badge-minw, 18px);
+  height: var(--cell-badge-h, 18px);
+  padding: 0 var(--cell-badge-px, 6px);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: var(--ui-fg);
+  font-size: var(--cell-badge-fs, 11px);
+  line-height: 1;
+}
+:root[data-theme="light"] .ui-cell__badge{
+  background: rgba(17,19,24,0.08);
+  color: var(--ui-fg);
+}

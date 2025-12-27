@@ -1,0 +1,52 @@
+.ui-check{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.ui-check input{ display: none; }
+
+.ui-check__box{
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .12s ease, border-color .12s ease;
+}
+.ui-check[data-checked="true"] .ui-check__box{
+  background: var(--ui-primary);
+  border-color: color-mix(in oklab, var(--ui-primary) 70%, var(--ui-border));
+}
+.ui-check__mark{
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: white;
+  opacity: 0;
+  transform: scale(.85);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.ui-check[data-checked="true"] .ui-check__mark{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ui-check__label{
+  color: var(--ui-fg);
+  font-size: 13px;
+}
+.ui-check__desc{
+  color: var(--ui-muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.ui-check[aria-disabled="true"]{
+  opacity: .6;
+  cursor: not-allowed;
+}

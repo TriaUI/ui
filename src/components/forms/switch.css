@@ -1,0 +1,46 @@
+.ui-switch{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.ui-switch__track{
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid var(--ui-border);
+  position: relative;
+  transition: background .12s ease, border-color .12s ease;
+}
+:root[data-theme="light"] .ui-switch__track{
+  background: rgba(17,19,24,0.08);
+}
+.ui-switch[data-checked="true"] .ui-switch__track{
+  background: color-mix(in oklab, var(--ui-primary) 75%, black);
+  border-color: color-mix(in oklab, var(--ui-primary) 60%, var(--ui-border));
+}
+.ui-switch__thumb{
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--ui-panel);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  transition: left .12s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,.18);
+}
+.ui-switch[data-checked="true"] .ui-switch__thumb{
+  left: 22px;
+}
+.ui-switch__label{
+  font-size: 13px;
+  color: var(--ui-fg);
+}
+.ui-switch[aria-disabled="true"]{
+  opacity: .6;
+  cursor: not-allowed;
+}

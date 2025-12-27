@@ -1,0 +1,17 @@
+.ui-minicell{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.ui-minicell[data-clickable="true"]{ cursor: pointer; }
+.ui-minicell[data-clickable="true"]:hover{ background: rgba(255,255,255,0.04); }
+:root[data-theme="light"] .ui-minicell[data-clickable="true"]:hover{ background: rgba(17,19,24,0.04); }
+
+.ui-minicell__before{ display: inline-flex; align-items: center; justify-content: center; }
+.ui-minicell__body{ flex: 1; display: grid; gap: 2px; }
+.ui-minicell__title{ font-weight: 700; }
+.ui-minicell__subtitle{ font-size: 12px; color: var(--ui-muted); }
+.ui-minicell__after{ display: inline-flex; align-items: center; justify-content: center; color: var(--ui-muted); }

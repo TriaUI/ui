@@ -1,0 +1,28 @@
+/* themes.css — legacy aliases for older tokens.
+   Prefer using --ui-* tokens in components. */
+
+:root[data-theme="light"]{
+  --bg: var(--ui-bg);
+  --surface: var(--ui-panel);
+  --text: var(--ui-fg);
+  --muted: var(--ui-muted);
+  --border: var(--ui-border);
+  --accent: var(--ui-primary);
+}
+
+:root[data-theme="dark"]{
+  --bg: var(--ui-bg);
+  --surface: var(--ui-panel);
+  --text: var(--ui-fg);
+  --muted: var(--ui-muted);
+  --border: var(--ui-border);
+  --accent: var(--ui-primary);
+}
+
+/* Brands (example) */
+:root[data-brand="default"]{ }
+:root[data-brand="neon"]{
+  --ui-primary: #00f5d4;
+  --ui-primary-fg: #00100c;
+  --accent: var(--ui-primary);
+}

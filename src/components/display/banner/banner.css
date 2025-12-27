@@ -1,0 +1,29 @@
+.ui-banner{
+  background: var(--ui-panel);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ui-banner__icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--ui-primary) 20%, transparent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-banner__body{ flex: 1; display: grid; gap: 6px; }
+.ui-banner__title{ margin: 0; font-weight: 800; font-size: 14px; }
+.ui-banner__desc{ margin: 0; color: var(--ui-muted); font-size: 13px; }
+.ui-banner__actions{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+
+.ui-banner[data-tone="danger"] .ui-banner__icon{
+  background: color-mix(in oklab, var(--ui-danger) 20%, transparent);
+}

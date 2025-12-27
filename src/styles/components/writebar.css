@@ -1,0 +1,30 @@
+.ui-writebar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: var(--safe-bottom);
+  background: color-mix(in oklab, var(--ui-bg) 92%, transparent);
+  backdrop-filter: blur(var(--tabbar-blur, 10px));
+  border-top: 1px solid var(--ui-border);
+  z-index: 70;
+}
+.ui-writebar__inner{
+  display: flex;
+  gap: var(--ui-space-2, 10px);
+  align-items: flex-end;
+  padding: var(--ui-space-2, 10px) var(--input-px, 12px);
+}
+.ui-writebar__input{
+  flex: 1;
+  min-height: var(--input-h-md, 40px);
+  max-height: 120px;
+  height: auto;
+  padding: var(--ui-space-2, 10px) var(--input-px, 12px);
+  border-radius: var(--input-radius, var(--ui-radius));
+  border: 1px solid var(--ui-border);
+  background: var(--ui-panel);
+  color: var(--ui-fg);
+  outline: none;
+  resize: none;
+}

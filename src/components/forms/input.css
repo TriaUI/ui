@@ -1,0 +1,38 @@
+@import "../_shared/control.css";
+
+.ui-input{
+  
+}
+
+.ui-input__wrap{
+  display: grid;
+  gap: 8px;
+}
+
+.ui-input__label{
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ui-input__fieldWrap{
+  position: relative;
+}
+
+.ui-input__iconLeft, .ui-input__iconRight{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ui-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+}
+
+.ui-input__iconLeft{ left: 8px; }
+.ui-input__iconRight{ right: 8px; }
+
+.ui-input__withLeft{ padding-left: 42px; }
+.ui-input__withRight{ padding-right: 42px; }

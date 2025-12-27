@@ -1,0 +1,27 @@
+.ui-spinner{
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top-color: var(--ui-fg);
+  animation: ui-spin .7s linear infinite;
+}
+:root[data-theme="light"] .ui-spinner{
+  border: 2px solid rgba(17,19,24,0.25);
+  border-top-color: var(--ui-fg);
+}
+
+@keyframes ui-spin{
+  to { transform: rotate(360deg); }
+}
+
+.ui-screenspinner{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+}

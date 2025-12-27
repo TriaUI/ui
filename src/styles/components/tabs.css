@@ -1,0 +1,26 @@
+.ui-tabs__list {
+    display: inline-flex;
+    gap: 6px;
+    padding: 6px;
+    border: 1px solid var(--ui-border);
+    background: var(--ui-panel);
+    border-radius: calc(var(--ui-radius) + 2px);
+}
+
+.ui-tabs__trigger {
+    height: 34px;
+    padding: 0 12px;
+    border-radius: var(--ui-radius);
+    border: 0;
+    background: transparent;
+    color: var(--ui-muted);
+    cursor: pointer;
+}
+
+.ui-tabs__trigger[data-state="active"] {
+    background: rgba(255,255,255,0.08);
+    color: var(--ui-fg);
+}
+:root[data-theme="light"] .ui-tabs__trigger[data-state="active"] {
+    background: rgba(17,19,24,0.08);
+}

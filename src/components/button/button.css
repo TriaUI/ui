@@ -1,0 +1,66 @@
+.ui-btn {
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: var(--btn-radius, var(--ui-radius));
+    font: inherit;
+    color: var(--ui-fg);
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--btn-gap, 10px);
+    line-height: 1;
+    user-select: none;
+    transition: transform var(--ui-duration-fast, 120ms) var(--ui-ease, ease), background var(--ui-duration, 180ms) var(--ui-ease, ease), border-color var(--ui-duration, 180ms) var(--ui-ease, ease), opacity var(--ui-duration, 180ms) var(--ui-ease, ease);
+}
+
+.ui-control{
+    height: var(--input-h-md, 40px);
+    padding: 0 var(--input-px, 12px);
+    border-radius: var(--input-radius, var(--ui-radius));
+    font-family: var(--ui-font);
+}
+.ui-control--sm{ height: var(--input-h-sm, 34px); }
+.ui-control--lg{ height: var(--input-h-lg, 46px); }
+
+
+.ui-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ui-focus);
+}
+
+.ui-btn:active { transform: translateY(1px); }
+.ui-btn[disabled] { opacity: .55; cursor: not-allowed; }
+
+.ui-btn[data-size="sm"] { height: var(--btn-h-sm, 32px); padding: 0 var(--btn-px-sm, 12px); }
+.ui-btn[data-size="md"] { height: var(--btn-h-md, 40px); padding: 0 var(--btn-px-md, 14px); }
+.ui-btn[data-size="lg"] { height: var(--btn-h-lg, 48px); padding: 0 var(--btn-px-lg, 16px); }
+
+.ui-btn[data-variant="solid"][data-tone="primary"] {
+    background: var(--ui-primary);
+    color: var(--ui-primary-fg);
+}
+.ui-btn[data-variant="outline"] {
+    border-color: var(--ui-border);
+    background: rgba(255,255,255,0.02);
+}
+:root[data-theme="light"] .ui-btn[data-variant="outline"] {
+    background: rgba(17,19,24,0.02);
+}
+
+.ui-btn[data-variant="ghost"] {
+    border-color: transparent;
+    background: transparent;
+}
+.ui-btn[data-variant="ghost"]:hover {
+    background: rgba(255,255,255,0.06);
+}
+:root[data-theme="light"] .ui-btn[data-variant="ghost"]:hover {
+    background: rgba(17,19,24,0.06);
+}
+
+.ui-btn[data-tone="danger"][data-variant="solid"] {
+    background: var(--ui-danger);
+    color: var(--ui-danger-fg);
+}

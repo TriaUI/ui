@@ -1,0 +1,12 @@
+.ui-cardgrid{
+    display: grid;
+    gap: 12px;
+}
+
+.ui-cardgrid[data-cols="1"]{ grid-template-columns: 1fr; }
+.ui-cardgrid[data-cols="2"]{ grid-template-columns: repeat(2, 1fr); }
+.ui-cardgrid[data-cols="3"]{ grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 560px){
+    .ui-cardgrid{ grid-template-columns: 1fr !important; }
+}

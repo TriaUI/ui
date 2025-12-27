@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: var(--ui-font);
+    font-size: var(--ui-font-size);
+    background: var(--ui-bg);
+    color: var(--ui-fg);
+}
+a { color: inherit; }
